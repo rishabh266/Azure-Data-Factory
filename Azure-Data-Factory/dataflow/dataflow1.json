@@ -28,6 +28,10 @@
 					"name": "sink1"
 				},
 				{
+					"dataset": {
+						"referenceName": "Aggrateout1",
+						"type": "DatasetReference"
+					},
 					"name": "sink2"
 				}
 			],
