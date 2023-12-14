@@ -1,0 +1,38 @@
+{
+	"name": "Excel2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "Sheet1",
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "employee2.xlsx",
+				"container": "raw2"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": [
+			{
+				"name": "Name",
+				"type": "String"
+			},
+			{
+				"name": "Salary",
+				"type": "String"
+			},
+			{
+				"name": "User",
+				"type": "String"
+			},
+			{
+				"name": "Location",
+				"type": "String"
+			}
+		]
+	}
+}
