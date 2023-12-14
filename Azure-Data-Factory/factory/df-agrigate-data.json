@@ -1,9 +1,0 @@
-{
-	"name": "df-agrigate-data",
-	"location": "eastus",
-	"identity": {
-		"type": "SystemAssigned",
-		"principalId": "c9c0a4b8-50da-4e66-8121-d6c013230d89",
-		"tenantId": "f480c168-478b-4f77-9b90-d952bd09f30f"
-	}
-}
