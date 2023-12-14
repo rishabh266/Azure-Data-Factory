@@ -7,6 +7,10 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "df-agrigate-data"
 		},
+		"AzureBlobStorageAggregateoutput1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorageAggregateoutput1'"
+		},
 		"AzureBlobStorageraw1_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorageraw1'"
@@ -45,6 +49,9 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"AzureBlobStorageAggregateoutput1_connectionString": {
+						"value": "[parameters('AzureBlobStorageAggregateoutput1_connectionString')]"
 					},
 					"AzureBlobStorageraw1_connectionString": {
 						"value": "[parameters('AzureBlobStorageraw1_connectionString')]"

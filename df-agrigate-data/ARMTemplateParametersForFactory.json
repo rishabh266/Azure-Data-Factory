@@ -5,6 +5,9 @@
 		"factoryName": {
 			"value": "df-agrigate-data"
 		},
+		"AzureBlobStorageAggregateoutput1_connectionString": {
+			"value": ""
+		},
 		"AzureBlobStorageraw1_connectionString": {
 			"value": ""
 		},
