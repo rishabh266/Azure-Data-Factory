@@ -1,0 +1,22 @@
+{
+	"name": "Unionoutput1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorageunion1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "target1"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
