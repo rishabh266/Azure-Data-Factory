@@ -1,0 +1,72 @@
+{
+	"name": "dataflow1",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "EMP_DelimitedText1",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "DelimitedText1",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				}
+			],
+			"transformations": [
+				{
+					"name": "select1"
+				},
+				{
+					"name": "sort1"
+				},
+				{
+					"name": "aggregate1"
+				},
+				{
+					"name": "derivedColumn1"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          User as integer,",
+				"          Name as string,",
+				"          Salary as integer,",
+				"          Location as string,",
+				"          Department as string,",
+				"          {Attandence } as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> source1",
+				"source1 select(mapColumn(",
+				"          User,",
+				"          Name,",
+				"          Salary,",
+				"          Location",
+				"     ),",
+				"     partitionBy('hash', 1),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> select1",
+				"select1 sort(asc(Name, true),",
+				"     asc(User, true),",
+				"     caseInsensitive: true) ~> sort1",
+				"derivedColumn1 aggregate(groupBy(Location),",
+				"     Salary = sum(Salary)) ~> aggregate1",
+				"sort1 derive(Salary = iif(Salary==10000,20000,Salary)) ~> derivedColumn1",
+				"aggregate1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sink1"
+			]
+		}
+	}
+}

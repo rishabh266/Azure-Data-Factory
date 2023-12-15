@@ -1,0 +1,9 @@
+{
+	"name": "dfproject7",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "9e1ba4cf-80de-4f6c-9915-11cf81d99e72",
+		"tenantId": "f480c168-478b-4f77-9b90-d952bd09f30f"
+	}
+}
