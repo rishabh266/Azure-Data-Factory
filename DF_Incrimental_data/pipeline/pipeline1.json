@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy data1",
+				"name": "Copy raw data1",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -19,8 +19,8 @@
 						"type": "DelimitedTextSource",
 						"additionalColumns": [
 							{
-								"name": "insert_time",
-								"value": "10:25 am"
+								"name": "inserttime",
+								"value": "CURRENT_TIMESTAMP"
 							}
 						],
 						"storeSettings": {
@@ -48,7 +48,7 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "user_id",
+									"name": "User_ID",
 									"type": "Int32",
 									"physicalType": "int"
 								}
@@ -79,11 +79,11 @@
 							},
 							{
 								"source": {
-									"name": "insert_time",
+									"name": "inserttime",
 									"type": "String"
 								},
 								"sink": {
-									"name": "insert_time",
+									"name": "Insert_date",
 									"type": "DateTime",
 									"physicalType": "datetime"
 								}
