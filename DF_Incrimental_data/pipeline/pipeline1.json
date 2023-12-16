@@ -43,13 +43,11 @@
 						"mappings": [
 							{
 								"source": {
-									"name": "User",
-									"type": "String",
+									"name": "User_ID",
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "User_ID",
-									"type": "Int32",
+									"name": "user_id",
 									"physicalType": "int"
 								}
 							},
