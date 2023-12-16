@@ -11,6 +11,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureBlobStoragerawinput'"
 		},
+		"AzureSqlDatabaselookupoutput1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabaselookupoutput1'"
+		},
 		"AzureSqlDatabaseraw1_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabaseraw1'"
@@ -44,6 +48,9 @@
 					},
 					"AzureBlobStoragerawinput_connectionString": {
 						"value": "[parameters('AzureBlobStoragerawinput_connectionString')]"
+					},
+					"AzureSqlDatabaselookupoutput1_connectionString": {
+						"value": "[parameters('AzureSqlDatabaselookupoutput1_connectionString')]"
 					},
 					"AzureSqlDatabaseraw1_connectionString": {
 						"value": "[parameters('AzureSqlDatabaseraw1_connectionString')]"

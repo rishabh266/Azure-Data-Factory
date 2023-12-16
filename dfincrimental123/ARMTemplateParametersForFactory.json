@@ -8,6 +8,9 @@
 		"AzureBlobStoragerawinput_connectionString": {
 			"value": ""
 		},
+		"AzureSqlDatabaselookupoutput1_connectionString": {
+			"value": ""
+		},
 		"AzureSqlDatabaseraw1_connectionString": {
 			"value": ""
 		}
