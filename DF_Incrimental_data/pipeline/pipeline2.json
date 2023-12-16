@@ -126,6 +126,11 @@
 				]
 			}
 		],
+		"variables": {
+			"sampleName": {
+				"type": "String"
+			}
+		},
 		"annotations": []
 	}
 }
